@@ -1,1 +1,57 @@
-<h1>Header Section</h1>
+<div class="header-wrapper">
+  <h1>Logo</h1>
+  <div class="right-side">
+    <a
+      class="icon-link icons"
+      href="https://www.linkedin.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a
+      class="icon-link icons"
+      href="https://github.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="#contact-info" class="contact-anchor"><h2>Contact Me</h2></a>
+  </div>
+</div>
+
+<style>
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icons {
+    color: #98aab9;
+  }
+
+  .left-side {
+  }
+
+  .right-side {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .contact-anchor {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .contact-anchor:hover {
+    color: gray;
+    transition: 3s smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

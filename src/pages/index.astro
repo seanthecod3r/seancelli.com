@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 import Intro from "../components/Intro.astro";
 import About from "../components/About.astro";
 import Expertise from "../components/Expertise.astro";
-import Qualifications from "../components/Qualifications.astro";
+import InfoSection from "../components/InfoSection.astro";
 import Portfolio from "../components/Portfolio.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
@@ -13,23 +13,57 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="Welcome to Astro.">
   <main>
-    <Header />
-    <Intro />
-    <About />
-    <Expertise />
-    <!-- <Qualifications /> -->
-    <Portfolio />
-    <Contact />
-    <Footer />
+    <div class="section header">
+      <div class="container">
+        <Header />
+      </div>
+    </div>
+
+    <div class="section intro">
+      <div class="container">
+        <Intro />
+      </div>
+    </div>
+
+    <div class="section info">
+      <div class="container">
+        <InfoSection />
+      </div>
+    </div>
+
+    <div class="section portfolio">
+      <div class="container">
+        <Portfolio />
+      </div>
+    </div>
+
+    <div class="section contact" id="contact-info">
+      <div class="container">
+        <Contact />
+      </div>
+    </div>
   </main>
 </Layout>
 
 <style>
-  h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
+  .section {
+    width: 100%;
+  }
+
+  .container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  .header,
+  .intro,
+  .portfolio {
+    background-color: #ebeff3;
+  }
+
+  .info,
+  .contact {
+    background-color: white;
   }
 </style>

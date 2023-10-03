@@ -1,0 +1,28 @@
+---
+import About from "./About.astro";
+import Expertise from "./Expertise.astro";
+---
+
+<div class="info-section">
+  <div class="top-wrapper">
+    <About />
+    <Expertise />
+  </div>
+
+  <div class="bottom-wrapper">
+    <h1>Quals1</h1>
+    <h1>Quals2</h1>
+  </div>
+</div>
+
+<style>
+  .info-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-wrapper,
+  .bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

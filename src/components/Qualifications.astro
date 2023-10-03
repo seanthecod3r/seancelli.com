@@ -1,0 +1,14 @@
+---
+interface QualificationEntry {
+    title: string;
+    subtitle: string;
+    dateRange: string;
+}
+
+interface Props {
+	sectionTitle: string;
+	entries: QualificationEntry[];
+}
+
+const { entires, sectionTitle } = Astro.props;
+---

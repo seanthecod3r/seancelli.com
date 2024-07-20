@@ -1,0 +1,30 @@
+.content-wrapper {
+}
+
+body {
+  margin: 0;
+}
+
+a.icon-link .fab.fa-github {
+  transition: 0.3s ease;
+  font-size: 36px;
+}
+
+a.icon-link .fab.fa-linkedin {
+  transition: 0.3s ease;
+  font-size: 36px;
+}
+
+a.icon-link {
+  color: inherit;
+  text-decoration: none;
+  padding: inherit;
+}
+
+a.icon-link .fab.fa-github:hover {
+  color: #181717;
+}
+
+a.icon-link .fab.fa-linkedin:hover {
+  color: #0077b5;
+}

@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+// import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Intro from "../components/Intro.astro";
 import About from "../components/About.astro";
@@ -11,34 +11,50 @@ import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<!-- <Layout title="SC">
+  <div class="m-auto max-w-[1300px] py-10 px-5">
+    <div class="flex flex-col gap-6">
+      <div>
+        <Header />
+      </div>
+      <div class="">
+        <Intro />
+      </div>
+      <div class="">
+        <InfoSection />
+      </div>
+    </div>
+  </div>
+</Layout> -->
+
+<Layout title="SC">
   <main>
-    <div class="section header">
-      <div class="container">
+    <div class="bg-[#ebeff3] w-full">
+      <div class="max-w-full py-10 px-10 sm:px-[75px] md:px-[125px] mx-auto lg:px-[175px]">
         <Header />
       </div>
     </div>
 
-    <div class="section intro">
-      <div class="container">
+    <div class="bg-[#ebeff3] w-full">
+      <div class="max-w-full py-10 px-10 sm:px-[75px] md:px-[125px] mx-auto lg:px-[175px]">
         <Intro />
       </div>
     </div>
 
-    <div class="section info">
-      <div class="container">
+    <div class="bg-white w-full">
+      <div class="max-w-full py-10 px-10 sm:px-[75px] md:px-[125px] mx-auto lg:px-[175px]">
         <InfoSection />
-      </div>
+      </div>  
     </div>
 
-    <div class="section portfolio">
-      <div class="container">
+    <div class="bg-[#ebeff3] w-full">
+      <div class="max-w-full py-10 px-10 sm:px-[75px] md:px-[125px] mx-auto lg:px-[175px]">
         <Portfolio />
       </div>
     </div>
 
-    <div class="section contact" id="contact-info">
-      <div class="container">
+    <div class="bg-white w-full" id="contact-info">
+      <div class="max-w-full py-10 px-10 sm:px-[75px] md:px-[125px] mx-auto lg:px-[175px]">
         <Contact />
       </div>
     </div>
@@ -46,15 +62,6 @@ import Footer from "../components/Footer.astro";
 </Layout>
 
 <style>
-  .section {
-    width: 100%;
-  }
-
-  .container {
-    max-width: 1300px;
-    margin: auto;
-    padding: 40px 20px;
-  }
 
   .header,
   .intro,

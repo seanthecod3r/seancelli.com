@@ -1,76 +1,80 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// import Card from "../components/Card.astro";
 import Header from "../components/Header.astro";
 import Intro from "../components/Intro.astro";
 import About from "../components/About.astro";
 import Expertise from "../components/Expertise.astro";
-import InfoSection from "../components/InfoSection.astro";
-import Portfolio from "../components/Portfolio.astro";
 import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Section from "../layouts/Section.astro";
 ---
-
-<!-- <Layout title="SC">
-  <div class="m-auto max-w-[1300px] py-10 px-5">
-    <div class="flex flex-col gap-6">
-      <div>
-        <Header />
-      </div>
-      <div class="">
-        <Intro />
-      </div>
-      <div class="">
-        <InfoSection />
-      </div>
-    </div>
-  </div>
-</Layout> -->
 
 <Layout title="SC">
   <main>
-    <div class="bg-[#ebeff3]">
-      <div class="py-10 px-10 sm:px-[75px] md:px-[125px] lg:px-[175px]">
-        <Header />
+    <div class=`header-section bg-[#ebeff3]`>
+      <div class="container mx-auto grid grid-cols-2 pb-20 items-center">
+        <div class="px-5 md:px-10 pt-10">
+          <img
+            src="/logo.png"
+            alt="logo for website"
+            width="67px"
+            height="50px"
+          />
+        </div>
+        <div class="px-5 md:px-10 pt-10 justify-self-end">
+          <Header />
+        </div>
       </div>
     </div>
 
-    <div class="bg-[#ebeff3]">
-      <div class="py-10 px-10 sm:px-[75px] md:px-[125px] lg:px-[175px]">
+    <Section color="gray">
+      <div class="self-center px-10">
         <Intro />
       </div>
-    </div>
 
-    <div class="bg-white">
+      <div class="justify-self-center px-10">
+        <img
+          src="../../tempimage1.png"
+          alt="Image of Sean"
+          class="pt-10 md:pt-0"
+        />
+      </div>
+    </Section>
+
+    <Section color="white">
+      <div class="px-10 pt-20">
+        <About />
+      </div>
+
+      <div class="px-10 pt-20">
+        <Expertise />
+      </div>
+    </Section>
+
+    <Section color="white">
+      <div class="px-10">
+        <Experience />
+      </div>
+
+      <div class="px-10">
+        <Education />
+      </div>
+    </Section>
+
+    <!-- 
       <div class="">
-        <InfoSection />
-      </div>  
-    </div>
-
-    <div class="bg-[#ebeff3]">
-      <div class="py-10 px-10 sm:px-[75px] md:px-[125px] lg:px-[175px]">
         <Portfolio />
+      </div> -->
+    <div class=`contact-section bg-[#ebeff3] pb-20`>
+      <div class="container mx-auto" id="contact-section">
+        <div class="px-10">
+          <Contact />
+        </div>
       </div>
     </div>
 
-    <div class="bg-white" id="contact-info">
-      <div class="py-10 px-10 sm:px-[75px] md:px-[125px] lg:px-[175px]">
-        <Contact />
-      </div>
-    </div>
+    <Footer />
   </main>
 </Layout>
-
-<style>
-
-  .header,
-  .intro,
-  .portfolio {
-    background-color: #ebeff3;
-  }
-
-  .info,
-  .contact {
-    background-color: white;
-  }
-</style>

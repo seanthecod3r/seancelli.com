@@ -1,0 +1,23 @@
+---
+import QualificationsCard from "./QualificationsCard.astro";
+import QualificationsWrapper from "./QualificationsWrapper.astro";
+---
+
+<div class="flex flex-col gap-4">
+  <div class="font-medium text-3xl md:text-4xl text-black font-main-font pb-4">
+    My <span class="text-[#0B3D91]">Education</span>
+  </div>
+
+  <QualificationsWrapper>
+    <QualificationsCard
+      title="B.S. Computer Science"
+      subtitle="California State University, Sacramento"
+      timeSpent="2021 - 2024"
+    />
+    <QualificationsCard
+      title="Associates in Computer Science + Associates in Math and Science"
+      subtitle="Folsom Lake College"
+      timeSpent="2017 - 2021"
+    />
+  </QualificationsWrapper>
+</div>

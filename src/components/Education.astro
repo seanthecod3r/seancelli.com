@@ -9,15 +9,30 @@ import QualificationsWrapper from "./QualificationsWrapper.astro";
   </div>
 
   <QualificationsWrapper>
-    <QualificationsCard
-      title="B.S. Computer Science"
-      subtitle="California State University, Sacramento"
-      timeSpent="2021 - 2024"
-    />
-    <QualificationsCard
-      title="Associates in Computer Science + Associates in Math and Science"
-      subtitle="Folsom Lake College"
-      timeSpent="2017 - 2021"
-    />
+    <div class="edu-1">
+      <QualificationsCard
+        title="B.S. Computer Science"
+        subtitle="California State University, Sacramento"
+        timeSpent="2021 - 2024"
+      />
+    </div>
+    <div class="edu-2">
+      <QualificationsCard
+        title="Associates in Computer Science + Associates in Math and Science"
+        subtitle="Folsom Lake College"
+        timeSpent="2017 - 2021"
+      />
+    </div>
   </QualificationsWrapper>
 </div>
+
+<script>
+  import handleAnimation from "../utils/handleAnimation";
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    handleAnimation("right", ".edu-1", 750);
+    handleAnimation("right", ".edu-2", 750);
+  } else {
+    handleAnimation("left", ".edu-1", 0);
+    handleAnimation("left", ".edu-2", 0);
+  }
+</script>

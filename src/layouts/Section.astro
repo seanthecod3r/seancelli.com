@@ -6,8 +6,12 @@ interface Props {
 const { color } = Astro.props;
 ---
 
-<div class={color === 'gray' ? `bg-[#ebeff3]` : `bg-white`}>
-    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 pb-20">
-      <slot />
-    </div>
+<div
+  class={color === "gray"
+    ? `bg-[#ebeff3] overflow-hidden`
+    : `bg-white overflow-hidden`}
+>
+  <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 pb-20">
+    <slot />
+  </div>
 </div>

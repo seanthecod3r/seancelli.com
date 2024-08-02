@@ -26,27 +26,3 @@ const { title, subtitle, timeSpent } = Astro.props;
     </div>
   </div>
 </div>
-
-<script>
-  function handleIntersect(entries: any, observer: any) {
-    entries.forEach((entry: any) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("animate-slideIn");
-        observer.unobserve(entry.target);
-      }
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const options = {
-      threshold: 0.1,
-    };
-
-    const observer = new IntersectionObserver(handleIntersect, options);
-
-    const cards = document.querySelectorAll(".qualification-card");
-    cards.forEach((card) => {
-      observer.observe(card);
-    });
-  });
-</script>

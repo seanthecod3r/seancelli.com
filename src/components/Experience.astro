@@ -9,15 +9,25 @@ import QualificationsCard from "./QualificationsCard.astro";
   </div>
 
   <QualificationsWrapper>
-    <QualificationsCard
-      title="Full Stack Software Developer (Internship)"
-      subtitle="Intel"
-      timeSpent="May 2022 - August 2024"
-    />
-    <QualificationsCard
-      title="Frontend Software Developer + UI/UX Tester (Internship)"
-      subtitle="Intel"
-      timeSpent="August 2021 - May 2022"
-    />
+    <div class="exp-1">
+      <QualificationsCard
+        title="Full Stack Software Developer (Internship)"
+        subtitle="Intel"
+        timeSpent="May 2022 - August 2024"
+      />
+    </div>
+    <div class="exp-2">
+      <QualificationsCard
+        title="Frontend Software Developer + UI/UX Tester (Internship)"
+        subtitle="Intel"
+        timeSpent="August 2021 - May 2022"
+      />
+    </div>
   </QualificationsWrapper>
 </div>
+
+<script>
+  import handleAnimation from "../utils/handleAnimation";
+  handleAnimation("left", ".exp-1", 0);
+  handleAnimation("left", ".exp-2", 0);
+</script>

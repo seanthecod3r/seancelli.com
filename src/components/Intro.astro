@@ -1,5 +1,5 @@
 <div class="">
-  <div class="md:max-w-[600px]">
+  <div class="md:max-w-[600px] intro-info">
     <div
       class="font-main-font non-italic font-bold text-4xl leading-[3rem] md:text-[3.75rem] md:leading-[5.5rem]"
     >
@@ -78,3 +78,9 @@
     color: #98aab9;
   }
 </style>
+
+<script>
+  import handleAnimation from "../utils/handleAnimation";
+  handleAnimation("left", ".intro-info", 500);
+  handleAnimation("right", ".main-img", 1500);
+</script>

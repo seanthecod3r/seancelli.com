@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+.hideElement {
+  opacity: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 a.icon-link .fab.fa-github {
   transition: 0.3s ease;
   font-size: 36px;

@@ -11,69 +11,30 @@ import Education from "../components/Education.astro";
 import Section from "../layouts/Section.astro";
 ---
 
-<Layout title="SC">
+<Layout title="Sean Celli">
   <main>
-    <div class=`header-section bg-[#ebeff3]`>
-      <div class="container mx-auto grid grid-cols-2 pb-20 items-center">
-        <div class="px-5 md:px-10 pt-10">
-          <img
-            src="/logo.png"
-            alt="logo for website"
-            width="67px"
-            height="50px"
-          />
-        </div>
-        <div class="px-5 md:px-10 pt-10 justify-self-end">
-          <Header />
-        </div>
-      </div>
-    </div>
+    <Header />
 
-    <Section color="gray">
-      <div class="self-center px-10">
-        <Intro />
-      </div>
+    <Intro />
 
-      <div class="justify-self-center px-10">
-        <img
-          src="../../tempimage1.png"
-          alt="Image of Sean"
-          class="pt-10 md:pt-0"
-        />
-      </div>
+    <Section color="white">
+      <About />
+
+      <Expertise />
     </Section>
 
     <Section color="white">
-      <div class="px-10 pt-20">
-        <About />
-      </div>
+      <Experience />
 
-      <div class="px-10 pt-20">
-        <Expertise />
-      </div>
-    </Section>
-
-    <Section color="white">
-      <div class="px-10">
-        <Experience />
-      </div>
-
-      <div class="px-10">
-        <Education />
-      </div>
+      <Education />
     </Section>
 
     <!-- 
       <div class="">
         <Portfolio />
       </div> -->
-    <div class=`contact-section bg-[#ebeff3] pb-20`>
-      <div class="container mx-auto" id="contact-section">
-        <div class="px-10">
-          <Contact />
-        </div>
-      </div>
-    </div>
+
+    <Contact />
 
     <Footer />
   </main>

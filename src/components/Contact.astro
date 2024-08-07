@@ -1,101 +1,103 @@
-<div class="">
-  <div
-    class="font-main-font non-italic font-bold text-3xl md:text-4xl leading-[88px] pt-5"
-  >
-    Let's <span class="font-black text-primary">Make Great Things</span
-    >&nbsp;Together
+<div class=`contact-section bg-[#ebeff3] pb-20`>
+  <div class="container mx-auto px-10" id="contact-section">
+    <div
+      class="font-main-font non-italic font-bold text-3xl md:text-4xl leading-[88px] pt-5"
+    >
+      Let's <span class="font-black text-primary">Make Great Things</span
+      >&nbsp;Together
+    </div>
+    <form id="contact-form">
+      <div class="flex flex-wrap font-main-font">
+        <div class="w-full px-2 md:w-1/2">
+          <label
+            class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="shadow-lg bg-gray-50 border-gray-600 text-gray-900 text-sm block w-full p-2.5"
+            aria-required="true"
+          />
+          <p id="name-error" class="text-red-600 text-sm hidden">
+            Name is required.
+          </p>
+        </div>
+        <div class="w-full px-2 md:w-1/2">
+          <label
+            class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
+            >Email</label
+          >
+          <input
+            type="text"
+            id="email"
+            name="email"
+            class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+            aria-required="true"
+          />
+          <p id="email-error" class="text-red-600 text-sm hidden">
+            Valid email is required.
+          </p>
+        </div>
+        <div class="w-full px-2 md:w-1/2">
+          <label
+            class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
+            >Phone Number</label
+          >
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+            aria-required="true"
+          />
+          <p id="phone-error" class="text-red-600 text-sm hidden">
+            Valid phone number is required.
+          </p>
+        </div>
+        <div class="w-full px-2 md:w-1/2">
+          <label
+            class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
+            >Service</label
+          >
+          <input
+            type="text"
+            id="service"
+            name="service"
+            class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+            aria-required="true"
+          />
+          <p id="service-error" class="text-red-600 text-sm hidden">
+            Service is required.
+          </p>
+        </div>
+        <div class="w-full px-2">
+          <label
+            class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
+            >Message/Requirements</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
+            aria-required="true"
+            rows="4"></textarea>
+          <p id="message-error" class="text-red-600 text-sm hidden">
+            Message is required.
+          </p>
+        </div>
+      </div>
+      <div class="flex mt-5 mx-2 justify-end">
+        <button
+          type="submit"
+          class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-75 transition ease-in-out duration-150"
+        >
+          Send Request
+        </button>
+      </div>
+    </form>
   </div>
-  <form id="contact-form">
-    <div class="flex flex-wrap font-main-font">
-      <div class="w-full px-2 md:w-1/2">
-        <label
-          class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
-          >Name</label
-        >
-        <input
-          type="text"
-          id="name"
-          name="name"
-          class="shadow-lg bg-gray-50 border-gray-600 text-gray-900 text-sm block w-full p-2.5"
-          aria-required="true"
-        />
-        <p id="name-error" class="text-red-600 text-sm hidden">
-          Name is required.
-        </p>
-      </div>
-      <div class="w-full px-2 md:w-1/2">
-        <label
-          class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
-          >Email</label
-        >
-        <input
-          type="text"
-          id="email"
-          name="email"
-          class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
-          aria-required="true"
-        />
-        <p id="email-error" class="text-red-600 text-sm hidden">
-          Valid email is required.
-        </p>
-      </div>
-      <div class="w-full px-2 md:w-1/2">
-        <label
-          class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
-          >Phone Number</label
-        >
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
-          aria-required="true"
-        />
-        <p id="phone-error" class="text-red-600 text-sm hidden">
-          Valid phone number is required.
-        </p>
-      </div>
-      <div class="w-full px-2 md:w-1/2">
-        <label
-          class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
-          >Service</label
-        >
-        <input
-          type="text"
-          id="service"
-          name="service"
-          class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
-          aria-required="true"
-        />
-        <p id="service-error" class="text-red-600 text-sm hidden">
-          Service is required.
-        </p>
-      </div>
-      <div class="w-full px-2">
-        <label
-          class="block mb-2 mt-6 text-md md:text-lg font-medium text-left text-gray-900"
-          >Message/Requirements</label
-        >
-        <textarea
-          id="message"
-          name="message"
-          class="shadow-lg bg-gray-50 border-gray-300 text-gray-900 text-sm block w-full p-2.5"
-          aria-required="true"
-          rows="4"></textarea>
-        <p id="message-error" class="text-red-600 text-sm hidden">
-          Message is required.
-        </p>
-      </div>
-    </div>
-    <div class="flex mt-5 mx-2 justify-end">
-      <button
-        type="submit"
-        class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-75 transition ease-in-out duration-150"
-      >
-        Send Request
-      </button>
-    </div>
-  </form>
 </div>
 
 <script>
@@ -171,12 +173,14 @@
 
       if (valid) {
         const formData = {
-          name: form.name,
-          email: form.email,
-          phone: form.phone,
-          service: form.service,
-          message: form.message,
+          name,
+          email,
+          phone,
+          service,
+          message,
         };
+
+        console.log("FORM DATA: ", formData);
 
         try {
           const response = await fetch(`/api/send-email`, {

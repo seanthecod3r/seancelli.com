@@ -2,38 +2,48 @@
 import Section from "../layouts/Section.astro";
 ---
 
-<Section color="gray">
-  <div class="px-10 pt-10">
-    <img src="/logo.png" alt="logo for website" width="67px" height="50px" />
-  </div>
+<div class="bg-secondary">
+  <div
+    class="container px-5 sm:px-10 sm:mx-auto flex justify-between pb-10 items-center"
+  >
+    <div class="pt-10">
+      <img
+        src="/logo.png"
+        alt="logo for website"
+        width="67px"
+        height="50px"
+        class=""
+      />
+    </div>
 
-  <div class="px-10 pt-10 justify-self-end">
-    <div class="flex items-center gap-8">
-      <a
-        class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#0077b5] transition ease-in-out 150"
-        href="https://www.linkedin.com/in/sean-celli/"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
+    <div class="pt-10 justify-self-end">
+      <div class="flex items-center gap-8 justify-end">
+        <a
+          class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#0077b5] transition ease-in-out 150"
+          href="https://www.linkedin.com/in/sean-celli/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="LinkedIn"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
 
-      <a
-        class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#181717] transition ease-in-out duration-300"
-        href="https://github.com/seanthecod3r"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="GitHub"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-      <a
-        href="#contact-section"
-        class="no-underline text-gray-400 hover:text-black transition duration-300 ease-in-out"
-        title="Contact Me"
-        ><h2 class="text-xl font-main-font font-semibold">Contact</h2></a
-      >
+        <a
+          class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#181717] transition ease-in-out duration-300"
+          href="https://github.com/seanthecod3r"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="GitHub"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="#contact-section"
+          class="no-underline text-gray-400 hover:text-black transition duration-300 ease-in-out"
+          title="Contact Me"
+          ><h2 class="text-xl font-main-font font-semibold">Contact</h2></a
+        >
+      </div>
     </div>
   </div>
-</Section>
+</div>

@@ -118,9 +118,6 @@
       ) as HTMLButtonElement;
       const originalButtonText = submitButton.textContent;
 
-      submitButton.disabled = true;
-      submitButton.textContent = "Sending...";
-
       const name = (
         form.elements.namedItem("name") as HTMLInputElement
       ).value.trim();
@@ -185,6 +182,9 @@
           message,
         };
 
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
+
         try {
           grecaptcha.ready(function () {
             grecaptcha
@@ -208,6 +208,8 @@
                   toastr.error(
                     "reCAPTCHA verification failed. Please try again.",
                   );
+                  submitButton.disabled = false;
+                  submitButton.textContent = originalButtonText;
                   return;
                 }
 
@@ -227,14 +229,20 @@
                 } else {
                   toastr.error("Error sending request");
                 }
+              })
+              .catch((error: any) => {
+                toastr.error("Error sending request");
+              })
+              .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
               });
           });
         } catch (error) {
           toastr.error("Error sending request");
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
         }
       }
-
-      submitButton.disabled = false;
-      submitButton.textContent = originalButtonText;
     });
 </script>

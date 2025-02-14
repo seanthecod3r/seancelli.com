@@ -192,8 +192,6 @@
                 action: "submit",
               })
               .then(async function (token: string) {
-                console.log("reCAPTCHA Token:", token);
-
                 const recaptchaResponse = await fetch("/api/recaptcha", {
                   method: "POST",
                   headers: {

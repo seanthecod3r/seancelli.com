@@ -36,3 +36,7 @@ a.icon-link .fab.fa-github:hover {
 a.icon-link .fab.fa-linkedin:hover {
   color: #0077b5;
 }
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

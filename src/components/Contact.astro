@@ -213,7 +213,7 @@
                   return;
                 }
 
-                const response = await fetch(`/api/send-email`, {
+                const response = await fetch("/api/send-email", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
@@ -229,11 +229,12 @@
                 } else {
                   toastr.error("Error sending request");
                 }
+
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
               })
               .catch((error: any) => {
                 toastr.error("Error sending request");
-              })
-              .finally(() => {
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
               });

@@ -1,5 +1,5 @@
 export default function handleAnimation(
-  side: string,
+  from: "left" | "right" | "bottom" | "top",
   domElement: string,
   delay: number = 0,
 ): void {
@@ -8,10 +8,14 @@ export default function handleAnimation(
       if (entry.isIntersecting) {
         setTimeout(() => {
           entry.target.classList.remove("hideElement");
-          if (side === "left") {
+          if (from === "left") {
             entry.target.classList.add("animate-slideInFromLeft");
-          } else if (side === "right") {
+          } else if (from === "right") {
             entry.target.classList.add("animate-slideInFromRight");
+          } else if (from === "bottom") {
+            entry.target.classList.add("animate-slideInFromBottom");
+          } else if (from === "top") {
+            entry.target.classList.add("animate-slideInFromTop");
           }
           observer.unobserve(entry.target);
         }, delay);

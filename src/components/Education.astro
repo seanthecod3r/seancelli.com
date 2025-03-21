@@ -28,11 +28,6 @@ import QualificationsWrapper from "./QualificationsWrapper.astro";
 
 <script>
   import handleAnimation from "../utils/handleAnimation";
-  if (window.matchMedia("(min-width: 1024px)").matches) {
-    handleAnimation("right", ".edu-1", 750);
-    handleAnimation("right", ".edu-2", 750);
-  } else {
-    handleAnimation("left", ".edu-1", 0);
-    handleAnimation("left", ".edu-2", 0);
-  }
+    handleAnimation("bottom", ".edu-1", 1000);
+    handleAnimation("bottom", ".edu-2", 1000);
 </script>

@@ -13,17 +13,27 @@ module.exports = {
       },
       keyframes: {
         slideInFromLeft: {
-          "0%": { transform: "translateX(-100%)", opacity: "0" },
+          "0%": { transform: "translateX(-7%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
         slideInFromRight: {
-          "0%": { transform: "translateX(100%)", opacity: "0" },
+          "0%": { transform: "translateX(7%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
+        },
+        slideInFromBottom: {
+          "0%": { transform: "translateY(7%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        },
+        slideInFromTop: {
+          "0%": { transform: "translateY(-7%)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
         },
       },
       animation: {
         slideInFromLeft: "slideInFromLeft 1s ease-out forwards",
         slideInFromRight: "slideInFromRight 1s ease-out forwards",
+        slideInFromBottom: "slideInFromBottom 1s ease-out forwards",
+        slideInFromTop: "slideInFromTop 1s ease-out forwards",
       },
     },
   },

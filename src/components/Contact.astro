@@ -3,7 +3,8 @@
     <div
       class="font-main-font non-italic font-bold text-3xl md:text-4xl leading-[88px] pt-5"
     >
-      Let's <span class="font-black text-primary dark:text-text_secondary">Make Great Things</span
+      Let's <span class="font-black text-primary dark:text-text_secondary"
+        >Make Great Things</span
       >&nbsp;Together
     </div>
     <form id="contact-form">
@@ -14,12 +15,13 @@
             >Name</label
           >
           <input
-  type="text"
-  id="name"
-  name="name"
-  class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-  aria-required="true"
-/>
+            type="text"
+            id="name"
+            name="name"
+            class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-required="true"
+            aria-label="Name"
+          />
           <p id="name-error" class="text-red-600 text-sm hidden">
             Name is required.
           </p>
@@ -35,6 +37,7 @@
             name="email"
             class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-required="true"
+            aria-label="Email"
           />
           <p id="email-error" class="text-red-600 text-sm hidden">
             Valid email is required.
@@ -51,6 +54,7 @@
             name="phone"
             class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-required="true"
+            aria-label="Phone Number"
           />
           <p id="phone-error" class="text-red-600 text-sm hidden">
             Valid phone number is required.
@@ -67,6 +71,7 @@
             name="service"
             class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-required="true"
+            aria-label="Service"
           />
           <p id="service-error" class="text-red-600 text-sm hidden">
             Service is required.
@@ -81,9 +86,9 @@
             id="message"
             name="message"
             class="shadow-md dark:shadow dark:shadow-white/10 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white text-sm block w-full p-2.5 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-
             aria-required="true"
-            rows="4"></textarea>
+            rows="4"
+            aria-label="Message/Requirements"></textarea>
           <p id="message-error" class="text-red-600 text-sm hidden">
             Message is required.
           </p>
@@ -92,7 +97,8 @@
       <div class="flex mt-5 mx-2 justify-end">
         <button
           type="submit"
-          class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-75 transition ease-in-out duration-150"
+          class="px-6 py-3 bg-primary dark:bg-text_secondary text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 dark:hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-600 focus:ring-opacity-75 transition ease-in-out duration-150"
+          aria-label="Send Request"
         >
           Send Request
         </button>
@@ -110,7 +116,7 @@
       event.preventDefault();
       const form = event.target as HTMLFormElement;
       const submitButton = form.querySelector(
-        'button[type="submit"]',
+        'button[type="submit"]'
       ) as HTMLButtonElement;
       const originalButtonText = submitButton.textContent;
 

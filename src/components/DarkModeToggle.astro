@@ -1,0 +1,50 @@
+<!-- Modified from: https://codepen.io/irunatbullets/pen/MWwyVOw -->
+<button
+  onclick="document.documentElement.classList.toggle('dark')"
+  class="relative w-[60px] h-[30px] bg-[#CFE7F9] dark:bg-[#2B2B2B] border-[2.5px] border-[#95b6f0] dark:border-[#5B5B5B] rounded-full transition-all duration-700 ease-[cubic-bezier(.46,.03,.52,.96)] cursor-pointer group"
+  aria-label="Toggle Dark Mode"
+>
+  <!-- Indicator -->
+  <span
+    class="absolute top-1/2 left-1/2 w-[20px] h-[20px] bg-[#FFE066] dark:bg-[#7B7B7B] rounded-full transform -translate-y-1/2 translate-x-[10%] dark:translate-x-[-110%] transition-all duration-700 ease-[cubic-bezier(.46,.03,.52,.96)] shadow-none dark:shadow-[inset_5px_0_0_0_rgba(0,0,0,0.2)]"
+  >
+    <span
+      class="absolute top-[3px] left-[3px] w-[4px] h-[4px] bg-white opacity-60 rounded-full hidden dark:block"
+    ></span>
+    <span
+      class="absolute bottom-[3px] right-[3px] w-[6px] h-[6px] bg-white opacity-80 rounded-full hidden dark:block"
+    ></span>
+  </span>
+
+  <!-- Decoration -->
+  <span
+    class="absolute top-1/2 left-1/2 w-[10px] h-[10px] bg-white rounded-full translate-y-[-50%] dark:w-[3px] dark:h-[3px] dark:top-[65%] dark:translate-y-0 dark:animate-[twinkle_0.8s_infinite_-0.6s]"
+  >
+    <span
+      class="absolute bottom-0 left-[-4px] w-[5px] h-[5px] bg-white rounded-t-full dark:top-[-10px] dark:left-[5px] dark:w-[3px] dark:h-[3px] dark:top-auto dark:animate-[twinkle_0.6s_infinite]"
+    ></span>
+    <span
+      class="absolute bottom-0 left-[8px] w-[7px] h-[7px] bg-white rounded-t-full rounded-br-full dark:top-[-4px] dark:left-[15px] dark:w-[3px] dark:h-[3px] dark:top-auto dark:animate-[twinkle_0.6s_infinite_-0.2s]"
+    ></span>
+  </span>
+</button>
+
+<style>
+  @keyframes twinkle {
+    50% {
+      opacity: 0.2;
+    }
+  }
+
+  @keyframes cloud {
+    0% {
+      transform: translate(0%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(0%, -50%);
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  iconSrc?: string;
+  iconAlt?: string;
+  bgColorClass?: string;
+  textColorClass?: string;
+  borderColorClass?: string;
+  hoverEffects?: boolean;
+}
+
+const {
+  title,
+  description,
+  iconSrc,
+  iconAlt = title,
+  hoverEffects = true,
+} = Astro.props;
+
+const hoverClasses = hoverEffects
+  ? "transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+  : "";
+---
+
+<div
+  class={`bg-secondary dark:bg-gray-700 rounded-xl shadow-md p-3 ${hoverClasses} border border-gray-200 dark:border-gray-700 overflow-hidden`}
+>
+  <div class="flex items-center">
+    {
+      iconSrc && (
+        <div class="pr-4 flex-shrink-0">
+          <img src={iconSrc} alt={iconAlt} class="w-10 h-10 rounded" />
+        </div>
+      )
+    }
+    <div class="flex flex-col">
+      <h3
+        class={`text-md font-main-font font-bold mb-1 text-gray-900 dark:text-white`}
+      >
+        {title}
+      </h3>
+      <p class={`text-gray-900 dark:text-white font-main-font text-sm`}>
+        {description}
+      </p>
+    </div>
+  </div>
+</div>

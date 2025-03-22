@@ -2,14 +2,14 @@
 import TechCard from "./TechCard.astro";
 ---
 
-<div class="font-expertise font-medium px-10 pt-10 lg:pt-0">
+<div class="font-expertise font-medium px-10 pt-10 lg:pt-0 skills-container">
   <div
     class="font-medium text-3xl md:text-4xl text-black dark:text-white font-main-font pb-4"
   >
     My <span class="text-text_primary dark:text-text_secondary">Skills</span>
   </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 skills-card-container">
     <TechCard
       title="JavaScript"
       description="The language of the web"
@@ -68,35 +68,8 @@ import TechCard from "./TechCard.astro";
   </div>
 </div>
 
-<style>
-  .progress-bar {
-    transition: width 2s ease-out;
-  }
-</style>
-
 <script>
-  function animateProgressBar(bar: any) {
-    const width = bar.getAttribute("data-width");
-    bar.style.width = width;
-  }
-
-  function handleIntersect(entries: any, observer: any) {
-    entries.forEach((entry: any) => {
-      if (entry.isIntersecting) {
-        animateProgressBar(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }
-
-  const options = {
-    threshold: 0.1,
-  };
-
-  const observer = new IntersectionObserver(handleIntersect, options);
-
-  const progressBars = document.querySelectorAll(".progress-bar");
-  progressBars.forEach((bar) => {
-    observer.observe(bar);
-  });
+  import handleAnimation from "../utils/handleAnimation";
+  handleAnimation("bottom", ".skills-container", 1000);
+  handleAnimation("bottom", ".skills-card-container", 1300);
 </script>

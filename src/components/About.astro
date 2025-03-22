@@ -1,15 +1,17 @@
 <div class="flex flex-col gap-4 px-10">
-  <div class="font-medium text-3xl md:text-4xl text-black dark:text-white font-main-font">
+  <div
+    class="font-medium text-3xl md:text-4xl text-black dark:text-white font-main-font about-header"
+  >
     About <span class="text-text_primary dark:text-text_secondary">Me</span>
   </div>
 
-  <div class="font-main-font text-md md:text-lg color-[#4e4e4e]">
+  <div class="font-main-font text-md md:text-lg color-[#4e4e4e] about-text">
     <p>
-      Hi there! I'm Sean Celli, a web developer who loves creating
-      dynamic and user-friendly web experiences. My primary expertise lies in
-      React, JavaScript, HTML, and CSS, and I love using these tools to bring
-      ideas to life on the web. Over my career, I've had the chance to work on
-      some amazing industry projects, making changes that have improved the
+      Hi there! I'm Sean Celli, a web developer who loves creating dynamic and
+      user-friendly web experiences. My primary expertise lies in React,
+      JavaScript, HTML, and CSS, and I love using these tools to bring ideas to
+      life on the web. Over my career, I've had the chance to work on some
+      amazing industry projects, making changes that have improved the
       experience of hundreds of thousands of users, and leading development on
       industry-grade websites from the ground up.
     </p>
@@ -23,3 +25,9 @@
     </p>
   </div>
 </div>
+
+<script>
+  import handleAnimation from "../utils/handleAnimation";
+  handleAnimation("bottom", ".about-header", 1000);
+  handleAnimation("bottom", ".about-text", 1300);
+</script>

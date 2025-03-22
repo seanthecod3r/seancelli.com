@@ -2,38 +2,53 @@ export default function handleAnimation(
   from: "left" | "right" | "bottom" | "top",
   domElement: string,
   delay: number = 0,
+  animateOnLoad: boolean = true,
 ): void {
-  function handleIntersect(entries: any, observer: any) {
-    entries.forEach((entry: any) => {
+  const applyAnimation = (element: Element) => {
+    setTimeout(() => {
+      element.classList.remove("hideElement");
+      if (from === "left") {
+        element.classList.add("animate-slideInFromLeft");
+      } else if (from === "right") {
+        element.classList.add("animate-slideInFromRight");
+      } else if (from === "bottom") {
+        element.classList.add("animate-slideInFromBottom");
+      } else if (from === "top") {
+        element.classList.add("animate-slideInFromTop");
+      }
+    }, delay);
+  };
+
+  // For lazy loading
+  function handleIntersect(
+    entries: IntersectionObserverEntry[],
+    observer: IntersectionObserver,
+  ) {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.remove("hideElement");
-          if (from === "left") {
-            entry.target.classList.add("animate-slideInFromLeft");
-          } else if (from === "right") {
-            entry.target.classList.add("animate-slideInFromRight");
-          } else if (from === "bottom") {
-            entry.target.classList.add("animate-slideInFromBottom");
-          } else if (from === "top") {
-            entry.target.classList.add("animate-slideInFromTop");
-          }
-          observer.unobserve(entry.target);
-        }, delay);
+        applyAnimation(entry.target);
+        observer.unobserve(entry.target);
       }
     });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    const options = {
-      threshold: 0.1,
-    };
+    const elements = document.querySelectorAll(domElement);
 
-    const observer = new IntersectionObserver(handleIntersect, options);
+    elements.forEach((element) => {
+      element.classList.add("hideElement");
 
-    const cards = document.querySelectorAll(domElement);
-    cards.forEach((card) => {
-      card.classList.add("hideElement");
-      observer.observe(card);
+      if (animateOnLoad) {
+        // Animate immediately on page load
+        applyAnimation(element);
+      } else {
+        // Only animate when element comes into view
+        const options = {
+          threshold: 0.1,
+        };
+        const observer = new IntersectionObserver(handleIntersect, options);
+        observer.observe(element);
+      }
     });
   });
 }

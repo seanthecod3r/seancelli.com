@@ -8,8 +8,8 @@ const { color } = Astro.props;
 
 <div
   class={color === "gray"
-    ? `bg-[#ebeff3] overflow-hidden`
-    : `bg-white overflow-hidden`}
+    ? "bg-[#ebeff3] dark:bg-[#111827] "
+    : "bg-white dark:bg-[#1f2937]"}
 >
   <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 pb-20">
     <slot />

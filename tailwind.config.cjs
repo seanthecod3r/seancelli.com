@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
@@ -10,6 +11,10 @@ module.exports = {
       colors: {
         primary: "#0B3D91",
         secondary: "#ebeff3",
+        dark_primary: "#1f2937",
+        dark_secondary: "#111827",
+        text_primary: "#0B3D91",
+        text_secondary: "#6c9ff5",
       },
       keyframes: {
         slideInFromLeft: {

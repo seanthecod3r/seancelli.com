@@ -1,4 +1,16 @@
-.content-wrapper {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    @apply text-black bg-white;
+  }
+
+  html.dark {
+    @apply text-white bg-black;
+  }
 }
 
 body {
@@ -8,6 +20,7 @@ body {
 .hideElement {
   opacity: 0;
 }
+
 
 html {
   scroll-behavior: smooth;

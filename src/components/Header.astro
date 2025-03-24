@@ -5,22 +5,28 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
 <div class="bg-secondary dark:bg-dark_secondary">
   <div
-    class="container px-5 sm:px-10 sm:mx-auto flex justify-between pb-10 items-center"
+    class="container px-4 sm:px-6 md:px-10 mx-auto flex flex-col sm:flex-row justify-between pb-4 sm:pb-6 md:pb-10 items-center"
   >
-    <div class="pt-10">
-      <img
-        src="/logo.webp"
-        alt="logo for website"
-        width="67px"
-        height="50px"
-        class=""
-      />
+    <div
+      class="w-full sm:w-auto flex justify-center sm:justify-start pt-6 sm:pt-10"
+    >
+      <a href="/" class="block">
+        <img
+          src="/logo.webp"
+          alt="logo for website"
+          width="67"
+          height="50"
+          class="w-auto h-10 sm:h-[50px]"
+        />
+      </a>
     </div>
 
-    <div class="pt-10 justify-self-end">
-      <div class="flex items-center gap-8 justify-end">
+    <div class="w-full sm:w-auto pt-4 sm:pt-10">
+      <div
+        class="flex flex-row flex-wrap justify-center sm:justify-end items-center gap-5 xs:gap-6 md:gap-8"
+      >
         <a
-          class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#0077b5] dark:text-[#cdd9e5] dark:hover:text-[#00a0dc] transition ease-in-out duration-300"
+          class="text-2xl sm:text-3xl md:text-4xl text-[#98aab9] hover:text-[#0077b5] dark:text-[#cdd9e5] dark:hover:text-[#00a0dc] transition ease-in-out duration-300"
           href="https://www.linkedin.com/in/sean-celli/"
           target="_blank"
           rel="noopener noreferrer"
@@ -30,7 +36,7 @@ import DarkModeToggle from "./DarkModeToggle.astro";
         </a>
 
         <a
-          class="text-3xl md:text-4xl text-[#98aab9] hover:text-[#181717] dark:text-[#cdd9e5] dark:hover:text-white transition ease-in-out duration-300"
+          class="text-2xl sm:text-3xl md:text-4xl text-[#98aab9] hover:text-[#181717] dark:text-[#cdd9e5] dark:hover:text-white transition ease-in-out duration-300"
           href="https://github.com/seanthecod3r"
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +49,11 @@ import DarkModeToggle from "./DarkModeToggle.astro";
           class="no-underline text-gray-400 hover:text-black dark:text-gray-300 dark:hover:text-white transition duration-300 ease-in-out"
           title="Contact Me"
         >
-          <h2 class="text-xl font-main-font font-semibold">Contact</h2>
+          <h2
+            class="text-base sm:text-lg md:text-xl font-main-font font-semibold"
+          >
+            Contact
+          </h2>
         </a>
         <DarkModeToggle />
       </div>

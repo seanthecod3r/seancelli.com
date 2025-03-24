@@ -1,6 +1,6 @@
 <!-- Modified from: https://codepen.io/irunatbullets/pen/MWwyVOw -->
 <button
-  onclick="document.documentElement.classList.toggle('dark')"
+  id="darkModeToggle"
   class="relative w-[60px] h-[30px] bg-[#CFE7F9] dark:bg-[#2B2B2B] border-[2.5px] border-[#95b6f0] dark:border-[#5B5B5B] rounded-full transition-all duration-700 ease-[cubic-bezier(.46,.03,.52,.96)] cursor-pointer group"
   aria-label="Toggle Dark Mode"
 >
@@ -48,3 +48,18 @@
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const darkMode = localStorage.getItem("darkMode");
+    if (darkMode === "true") {
+      document.documentElement.classList.add("dark");
+    }
+  });
+
+  const toggle = document.getElementById("darkModeToggle");
+  toggle?.addEventListener("click", () => {
+    const isDark = document.documentElement.classList.toggle("dark");
+    localStorage.setItem("darkMode", isDark.toString());
+  });
+</script>

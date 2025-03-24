@@ -52,10 +52,23 @@
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const darkMode = localStorage.getItem("darkMode");
-    if (darkMode === "true") {
-      document.documentElement.classList.add("dark");
+    if (darkMode !== null) {
+      document.documentElement.classList.toggle("dark", darkMode === "true");
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.classList.toggle("dark", prefersDark);
     }
   });
+
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (localStorage.getItem("darkMode") === null) {
+        document.documentElement.classList.toggle("dark", e.matches);
+      }
+    });
 
   const toggle = document.getElementById("darkModeToggle");
   toggle?.addEventListener("click", () => {

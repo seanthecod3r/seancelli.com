@@ -1,0 +1,78 @@
+---
+import WorkCard from "./WorkCard.astro";
+---
+
+<div
+  class="work-wrapper bg-[#ebeff3] dark:bg-dark_secondary pb-20"
+  id="work-section"
+>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div
+      class="font-main-font non-italic font-bold text-3xl md:text-4xl leading-[88px] py-5 work-header"
+    >
+      My <span class="font-black text-primary dark:text-text_secondary"
+        >Work</span
+      >
+    </div>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 cards-container"
+    >
+      <WorkCard
+        imageSrc="/images/work/portfolio.png"
+        imageAlt="Portfolio Site"
+        title="Portfolio Site"
+        description="My responsive portfolio site built with Astro, showcasing my skills and projects."
+        link="https://www.seancelli.com/"
+        technologies={["Astro", "Vercel", "Tailwind CSS", "TypeScript"]}
+        contributions="Developed the entire project with a focus on clean animations and a modern, responsive design. Utilized Astro's static site generation to ensure fast load times and optimal SEO performance. Achieved 100% score on core web vitals with Google Lighthouse."
+      />
+      <WorkCard
+        imageSrc="/images/work/bhs.png"
+        imageAlt="Bertoni Handyman Services"
+        title="Bertoni Handyman Services"
+        description="Full-featured website for a handyman service. Includes an admin dashboard for creating and managing quotes, jobs, and clients."
+        technologies={[
+          "React",
+          "Express.js",
+          "MongoDB",
+          "Tailwind CSS",
+          "TypeScript",
+          "Vercel",
+        ]}
+        link="https://www.bertonihandyman.com/"
+        contributions="Lead developer on a team of 3 and later solo, responsible for around 80% of the codebase. Implemented a robust and secure admin dashboard. Worked directly with the client to turn their ideas into a functional and aesthetically pleasing website."
+      />
+      <WorkCard
+        imageSrc="/images/work/random-acts.png"
+        imageAlt="Random Acts of Kindness"
+        title="Random Acts of Kindness"
+        description="A web app that displays a new act of kindness every day."
+        link="https://random-acts-hazel.vercel.app/"
+        technologies={[
+          "Svelte",
+          "SvelteKit",
+          "Tailwind CSS",
+          "TypeScript",
+          "Supabase",
+          "Vercel",
+        ]}
+        contributions="Developed the entire project, implementing the daily acts generation system and responsive design. Integrated with external APIs for content management. Utilizes a cron task on Supabase to populate new acts daily."
+      />
+      <WorkCard
+        imageSrc="/images/work/intel-gaming.png"
+        imageAlt="Intel Gaming"
+        title="Intel Gaming Website & App"
+        description="Intel's primary hub for all things gaming."
+        link="https://game.intel.com/"
+        technologies={["React", "Overwolf API", "TypeScript"]}
+        contributions="Added over 20 new features and improvements to the website and app, mostly related to the Overwolf API integration and CMS. This reached over 200,000 users monthly, and helped internal teams better manage the content that was displayed to users. "
+      />
+    </div>
+  </div>
+</div>
+
+<script>
+  import handleAnimation from "../utils/handleAnimation";
+  handleAnimation("bottom", ".work-header", 1500);
+  handleAnimation("bottom", ".cards-container", 1700);
+</script>

@@ -21,7 +21,13 @@ const { title } = Astro.props;
       content="Learn about my progress in the world of web development"
     />
 
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <!-- Favicon configuration -->
+    <link rel="icon" type="image/webp" href="/logo.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo.webp" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="/logo.webp" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="/logo.webp" />
+    <meta name="theme-color" content="#0B3D91" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
